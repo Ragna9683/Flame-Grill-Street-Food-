@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Wstępny projekt strony dla lokalu Na Łogniu w Radzyminie (nieoficjalna propozycja).">
+    <title>Na Łogniu Radzymin — Burgery, Kebab & Grill</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Pro/Free Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="preview-banner">Wstępny projekt · nieoficjalna propozycja strony dla Na Łogniu · menu i zdjęcia przykładowe, dane kontaktowe z publicznego profilu Google</div>
+
+    <!-- 01. Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container announcement-bar__container">
+            <span><i class="fa-solid fa-location-dot"></i> Radzymin, ul. Konstytucji 3 Maja 9</span>
+            <a href="tel:+48533810976" class="announcement-bar__link"><i class="fa-solid fa-phone"></i> Zamówienia: +48 533 810 976</a>
+        </div>
+    </div>
+
+    <!-- 02. Header & Navigation -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="#" class="logo">
+                NA ŁOGNIU <span class="logo__sub">GRILL & BURGER</span>
+            </a>
+
+            <nav class="nav" id="main-nav">
+                <a href="#hero" class="nav__link">Start</a>
+                <a href="#menu" class="nav__link">Menu</a>
+                <a href="#why-us" class="nav__link">Jak zamówić</a>
+                <a href="#reviews" class="nav__link">Opinie</a>
+                <a href="#contact" class="nav__link">Kontakt</a>
+            </nav>
+
+            <div class="header__actions">
+                <a href="tel:+48533810976" class="btn btn--fire"><i class="fa-solid fa-phone-volume"></i> ZAMÓW TERAZ</a>
+                <button class="burger-menu" id="burger-menu-btn" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 03. Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero__overlay"></div>
+        <div class="container hero__container">
+            <div class="hero__content">
+                <span class="hero__badge">RESTAURACJA W RADZYMINIE</span>
+                <h1 class="hero__title">Burgery, kebab<br><span class="text-flame">i grill</span><br>w Radzyminie</h1>
+                <p class="hero__desc">Burgery, kebab, kurczak i frytki. Przyjdź na Konstytucji 3 Maja 9 albo zadzwoń i zamów.</p>
+                <div class="hero__buttons">
+                    <a href="#menu" class="btn btn--fire"><i class="fa-solid fa-utensils"></i> ZOBACZ MENU</a>
+                    <a href="#contact" class="btn btn--outline"><i class="fa-solid fa-map-location-dot"></i> JAK DOJECHAĆ</a>
+                </div>
+            </div>
+            <div class="hero__image-box">
+                <div class="hero__art" role="img" aria-label="Miejsce na zdjęcie lokalu"><span>Tu pojawi się zdjęcie lokalu</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04. Trust Bar -->
+    <section class="trust-bar">
+        <div class="container trust-bar__container">
+            <div class="trust-item">
+                <span class="trust-item__icon"><i class="fa-solid fa-star"></i></span>
+                <div>
+                    <strong>4,5 / 5 w Google</strong>
+                    <p>Ponad 240 opinii</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <span class="trust-item__icon"><i class="fa-solid fa-utensils"></i></span>
+                <div>
+                    <strong>Burgery, kebab, kurczak</strong>
+                    <p>Oraz frytki i dodatki</p>
+                </div>
+            </div>
+            <div class="trust-item">
+                <span class="trust-item__icon"><i class="fa-solid fa-phone"></i></span>
+                <div>
+                    <strong>Zamówienia telefoniczne</strong>
+                    <p>+48 533 810 976</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 05. Menu Section (Interactive) -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-title__sub">WYBIERZ SWÓJ SMAK</span>
+                <h2 class="section-title__main">NASZE MENU</h2>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all"><i class="fa-solid fa-border-all"></i> Wszystkie</button>
+                <button class="filter-btn" data-filter="burgers"><i class="fa-solid fa-burger"></i> Burgery</button>
+                <button class="filter-btn" data-filter="kebab"><i class="fa-solid fa-utensils"></i> Kebab & Rollo</button>
+                <button class="filter-btn" data-filter="chicken"><i class="fa-solid fa-drumstick-bite"></i> Kurczak</button>
+                <button class="filter-btn" data-filter="fries"><i class="fa-solid fa-french-fries"></i> Frytki & Dodatki</button>
+            </div>
+
+            <!-- Dynamic Product Grid -->
+            <div class="menu-grid" id="menu-grid">
+                <!-- Data loaded dynamically from script.js -->
+            </div>
+            <p class="menu-note">Pozycje poglądowe. Pełne menu z opisami, cenami i zdjęciami zostanie uzupełnione na podstawie menu lokalu.</p>
+        </div>
+    </section>
+
+    <!-- 06. How to order -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-title__sub">JAK ZAMÓWIĆ</span>
+                <h2 class="section-title__main">ZAMÓW W TRZECH KROKACH</h2>
+            </div>
+
+            <div class="why-us__grid">
+                <div class="why-card">
+                    <div class="why-card__icon"><i class="fa-solid fa-utensils"></i></div>
+                    <h3>Wybierz z menu</h3>
+                    <p>Przejrzyj pozycje i ceny w sekcji Menu.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card__icon"><i class="fa-solid fa-phone"></i></div>
+                    <h3>Zadzwoń</h3>
+                    <p>Zamówienia telefoniczne: +48 533 810 976.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-card__icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <h3>Odbierz lub zapytaj o dostawę</h3>
+                    <p>Konstytucji 3 Maja 9, Radzymin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 07. Reviews -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-title__sub">OPINIE GOŚCI</span>
+                <h2 class="section-title__main">OCENA W GOOGLE</h2>
+            </div>
+
+            <div class="reviews__grid reviews__grid--single">
+                <div class="review-card review-card--summary">
+                    <p class="review-score">4,5 <span>/ 5</span></p>
+                    <p class="review-card__text">Na podstawie ponad 240 opinii w Google.</p>
+                    <a href="https://www.google.com/maps/place/?q=place_id:ChIJseWaVdDFHkcR3wXw5aqInls" target="_blank" rel="noopener" class="btn btn--fire"><i class="fa-brands fa-google"></i> ZOBACZ OPINIE W GOOGLE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 08. Location & Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container contact__container">
+            <div class="contact__info">
+                <span class="section-title__sub">ZAPRASZAMY LUB ZAMÓW</span>
+                <h2 class="section-title__main">ODWIEDŹ NAS LUB ZADZWOŃ</h2>
+                
+                <div class="contact__details">
+                    <div class="contact-item">
+                        <span class="contact-item__icon"><i class="fa-solid fa-location-dot"></i></span>
+                        <div>
+                            <strong>Adres:</strong>
+                            <p>ul. Konstytucji 3 Maja 9, 05-250 Radzymin</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item__icon"><i class="fa-solid fa-phone"></i></span>
+                        <div>
+                            <strong>Zamówienia telefoniczne:</strong>
+                            <p><a href="tel:+48533810976" class="phone-link">+48 533 810 976</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-item__icon"><i class="fa-solid fa-clock"></i></span>
+                        <div>
+                            <strong>Godziny otwarcia:</strong>
+                            <p>Poniedziałek: nieczynne</p>
+                            <p>Wtorek – Piątek: 09:00 – 22:00</p>
+                            <p>Sobota: 10:00 – 22:00</p>
+                            <p>Niedziela: 12:00 – 22:00</p>
+                            <p class="hours-note">Godziny według profilu Google, do potwierdzenia z właścicielem.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="tel:+48533810976" class="btn btn--fire btn--full"><i class="fa-solid fa-phone-flip"></i> ZADZWOŃ I ZAMÓW JEDZENIE</a>
+            </div>
+
+            <div class="contact__map">
+                <iframe title="Mapa dojazdu" src="https://www.google.com/maps?q=Konstytucji+3+Maja+9,+05-250+Radzymin&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- 09. Footer -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__brand">
+                <a href="#" class="logo">NA ŁOGNIU</a>
+                <p>Wstępny projekt strony, wykonany przez Yaroslava. Nieoficjalna propozycja dla Na Łogniu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal window for Product details -->
+    <div class="modal" id="product-modal">
+        <div class="modal__overlay" id="modal-overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" id="modal-close">&times;</button>
+            <div class="modal__body">
+                <img src="" alt="" class="modal__image" id="modal-img">
+                <div class="modal__info">
+                    <h3 class="modal__title" id="modal-title"></h3>
+                    <p class="modal__price" id="modal-price"></p>
+                    <p class="modal__desc" id="modal-desc"></p>
+                    <div class="modal__ingredients">
+                        <strong>Składniki & Sosy:</strong>
+                        <p id="modal-ingredients"></p>
+                    </div>
+                    <a href="tel:+48533810976" class="btn btn--fire btn--full"><i class="fa-solid fa-phone"></i> ZAMÓW TELEFONICZNIE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
